@@ -18,7 +18,21 @@ function Header() {
                 <input className="focus:outline-none p-2 h-full w-6 flex-grow rounded-l-md flex-shrink" type="text"/>
                 <MagnifyingGlassIcon className="h-12 p-4"/>
             </div>
-            
+            <div className='text-white flex text-center text-xs space-x-4 mx-2 whitespace-nowrap'>
+                <div className='link'>
+                    <p>Hello</p>
+                    <p className='font-extrabold md:text-sm '>Accounts & Lists</p>
+                </div>
+                <div className='link'>
+                    <p>Returns </p>
+                    <p>& orders</p>
+                </div>
+                <div className='relative link flex items-center'>
+                    <span className='bg-yellow-400 text-center rounded-full font-semibold h-4 w-4 text-black absolute top-0 right-0 md:right-8'>0</span>
+                    <ShoppingCartIcon className='h-7 '/>
+                    <p className='hidden md:inline mt-2'>basket</p>
+                </div>
+            </div>
         
       </div>
       <div>
