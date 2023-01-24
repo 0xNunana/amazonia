@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import {Bars3Icon,ShoppingCartIcon, MagnifyingGlassIcon} from "@heroicons/react/24/outline"
 function Header() {
   return (
     <header>
@@ -12,14 +13,16 @@ function Header() {
             className='cursor-pointer'
             />
             </div>
-            <div>
-                <input type="text"/>
+            <div className='hidden sm:flex items-center h-10 cursor-pointer 
+            flex-grow rounded-md bg-yellow-400 hover:bg-yellow-500'>
+                <input className="focus:outline-none p-2 h-full w-6 flex-grow rounded-l-md flex-shrink" type="text"/>
+                <MagnifyingGlassIcon className="h-12 p-4"/>
             </div>
             
         
       </div>
       <div>
-        secon part
+        second part
       </div>
     </header>
   )
