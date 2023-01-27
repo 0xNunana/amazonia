@@ -23,7 +23,9 @@ const ProductFeed = ({products}) => {
     
      {products?.slice(9,products.length).map(({id,title,price,description,category,image})=>(
        <Product key={id} image={image} category={category} title={title} price={price} description={description}/>
-    
+       
+
+       //check
     ))}
     </div>
   )
