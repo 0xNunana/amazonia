@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/24/outline'
 import Currency from 'react-currency-formatter'
+import { useDispatch } from 'react-redux'
+import { addToBasket } from '@/slices/basketSlice'
 
 
 const Product = ({id,title,price,description,category,image}) => {
@@ -10,12 +12,22 @@ const Product = ({id,title,price,description,category,image}) => {
   const Min= 1
   const [rating,setRating]=useState(1)
   const [hasPrime,setHasPrime]=useState(true)  
-  
+  const dispatch =useDispatch()
 useEffect(()=>{
   setRating(Math.floor(Math.random()*(Max-Min+1))+Min);
   setHasPrime(Math.random()<0.5)
 },[])
 
+
+const addtocart=()=>{
+  //what to send
+const product={id,title,price,description,category,image}
+
+//how to send it
+//usedispatch to send the products into the basketSlice by using
+// the method for adding created in the slice --addToBasket
+dispatch(addToBasket(product))
+}
   return (
     
     <div className='relative items-center flex flex-col  m-5 z-30 bg-white p-10'>
@@ -36,7 +48,7 @@ useEffect(()=>{
         <p className="text-xs text-gray-500">FREE Next-day Delivery</p>
     </div>
 )}
-<button className='mt-auto button'>Add to Cart</button>
+<button onClick={addtocart} className='mt-auto button'>Add to Cart</button>
     </div>
   )
 }
