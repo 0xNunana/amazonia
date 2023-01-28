@@ -4,6 +4,9 @@ const nextConfig = {
     domains:["links.papareact.com","fakestoreapi.com"]
   },
   reactStrictMode: true,
+   experimental: {
+    appDir: true,
+  },
 }
 
 module.exports = nextConfig

@@ -27,7 +27,9 @@ useEffect(()=>{
             
         </div>
 <p className='text-xs my-2 line-clamp-2'>{description}</p>
-<div className="mb-5"><Currency quantity={price} currency='GHS' /></div>
+<div className="mb-5">
+  <Currency quantity={price} currency='GHS' />
+  </div>
 {hasPrime && (
     <div className='flex items-center space-x-3 -mt-5'>
         <Image className=" w-12"src="https://links.papareact.com/fdw" width={100} height={30} alt="prime "/>

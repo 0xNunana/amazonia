@@ -9,7 +9,7 @@ const ProductFeed = ({products}) => {
        <Product key={id} image={image} category={category} title={title} price={price} description={description}/>
 
     ))} 
-    <Image className="md:col-span-full" src="https://links.papareact.com/dyz" width={1080} height={100} object-fill  alt="stretch"/>
+    <Image className="md:col-span-full" src="https://links.papareact.com/dyz" width={1080} height={100}   alt="stretch"/>
     
     <div className='md:col-span-2'>{products?.slice(4,5).map(({id,title,price,description,category,image})=>(
        <Product key={id} image={image} category={category} title={title} price={price} description={description}/>

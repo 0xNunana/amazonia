@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import {Bars3Icon,ShoppingCartIcon, MagnifyingGlassIcon} from "@heroicons/react/24/outline"
+import {signIn, signOut, useSession } from "next-auth/react"
+
 function Header() {
   return (
     <header>
@@ -19,8 +21,8 @@ function Header() {
                 <MagnifyingGlassIcon className="h-12 p-4"/>
             </div>
             <div className='text-white flex text-center text-xs space-x-4 mx-2 whitespace-nowrap'>
-                <div className='link'>
-                    <p>Hello</p>
+                <div onClick={signIn} className='link'>
+                    <p>Hello Yao</p>
                     <p className='font-extrabold md:text-sm '>Accounts & Lists</p>
                 </div>
                 <div className='link'>
