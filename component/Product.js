@@ -21,7 +21,7 @@ useEffect(()=>{
 
 const addtocart=()=>{
   //what to send
-const product={id,title,price,description,category,image}
+const product={id,title,price,description,category,image,hasPrime,rating}
 
 //how to send it
 //usedispatch to send the products into the basketSlice by using
