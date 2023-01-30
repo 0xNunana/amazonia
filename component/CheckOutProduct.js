@@ -9,7 +9,9 @@ import { addToBasket, removeFromBasket } from '@/slices/basketSlice'
 
 
 const CheckOutProduct = ({id,title,price,description,category,image,rating,hasPrime}) => {
+    
     const dispatch = useDispatch();
+
     const addMore =()=>{
         const product ={
             id,title,price,description,category,image,rating,hasPrime
