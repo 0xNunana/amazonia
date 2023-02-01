@@ -19,8 +19,10 @@ const transform = Items.map((item)=>({
         }
     } }))
 //  console.log(transform)
-const session = await stripe.checkout.sessions.create({
+    const session = await stripe.checkout.sessions.create({
     payment_method_types:["card"],
+    shipping_address_collection: {
+      allowed_countries: ["GB", "US", "CA", "AU","GH"]},
     line_items:transform,
     mode:"payment",
     success_url:`${process.env.HOST}/success`,
@@ -28,7 +30,8 @@ const session = await stripe.checkout.sessions.create({
     metadata:{email,images:JSON.stringify(Items.map((item)=>(item.image)))
     },
     
-})
+    })
+
 console.log("session created!",session.id)
 //every req to the server needs a response(res)
 res.status(200).json({id:session.id})//sessiom.id from stripe
