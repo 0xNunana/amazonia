@@ -7,6 +7,10 @@ const nextConfig = {
    experimental: {
     appDir: true,
   },
+  //this allows the key to be used in the loadStripe call
+  env:{
+    stripe_pk:process.env.Stripe_pk
+  }
 }
 
 module.exports = nextConfig
