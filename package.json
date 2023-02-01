@@ -12,7 +12,10 @@
     "@heroicons/react": "^2.0.13",
     "@next/font": "13.1.5",
     "@reduxjs/toolkit": "^1.9.1",
+    "@stripe/react-stripe-js": "^1.16.4",
+    "@stripe/stripe-js": "^1.46.0",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "axios": "^1.2.6",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "firebase": "^9.16.0",
@@ -22,7 +25,8 @@
     "react-currency-formatter": "^1.1.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.0.5",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "stripe": "^11.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
